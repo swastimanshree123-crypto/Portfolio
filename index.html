@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swastiman shree Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* MENU BUTTON */
+.menu-btn {
+    font-size: 28px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #38bdf8;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* SIDEBAR (FULLY HIDDEN) */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(#38bdf8, #0ea5e9);
+    position: fixed;
+    left: -270px;   /* 🔥 fully hidden */
+    top: 0;
+    padding: 20px;
+    transition: 0.4s ease;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+/* OPEN SIDEBAR */
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar h2 {
+    color: black;
+}
+
+.sidebar a {
+    display: block;
+    margin: 20px 0;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MAIN CONTENT */
+.main {
+    padding: 70px 20px;
+}
+
+/* CARDS */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* SKILLS GRID */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+/* BUTTONS */
+.btn {
+    background: #020617;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 5px;
+}
+.btn:hover {
+    background: #38bdf8;
+    color: black;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU BUTTON -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+    <h2>Swastiman shree</h2>
+
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#skills" onclick="toggleMenu()">Skills</a>
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+
+    <hr>
+
+    <a href="https://linkedin.com" class="btn" target="_blank">LinkedIn</a>
+    <a href="https://github.com" class="btn" target="_blank">GitHub</a>
+    <a href="tel:1234567890" class="btn">Call</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<section id="about">
+<h1>👋 Hi, I'm Swastiman shree</h1>
+<p>Student at G P Muzaffarpur | Java | Python | C | Web Developer | Problem Solver</p>
+
+<div class="card">
+<p>I love coding and building real-world projects using HTML, CSS, JavaScript, Java and Python.</p>
+</div>
+</section>
+
+<section id="skills">
+<h2>💻 Skills</h2>
+<div class="skills">
+<div class="card">Java</div>
+<div class="card">Python</div>
+<div class="card">C</div>
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">JavaScript</div>
+<div class="card">Problem Solving</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>🚀 Projects</h2>
+
+<div class="card">
+<h3>🎯 Checking odd or even number</h3>
+<p>Game where user guesses random number using JavaScript.</p>
+</div>
+
+<div class="card">
+<h3>🧮 Simple Calculator</h3>
+<p>Performs basic arithmetic operations.</p>
+</div>
+
+<div class="card">
+<h3>📋 To-Do App</h3>
+<p>Task manager for daily work tracking.</p>
+</div>
+
+</section>
+
+<section id="contact">
+<h2>📞 Contact</h2>
+<div class="card">
+<p>Email: swastimanshree123@gmail.com</p>
+<p>Phone: 8235843451</p>
+</div>
+</section>
+
+</div>
+<button></button>
+
+<script>
+function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
